@@ -1,0 +1,114 @@
+/* ============================================
+   CAFE LOMA - COOKIE BANNER (DSGVO)
+   ============================================ */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-cookie-banner);
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform var(--transition-base), opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.cookie-banner--visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.cookie-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-5) 0;
+}
+
+@media (max-width: 768px) {
+  .cookie-banner__inner {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-6) 0;
+  }
+}
+
+.cookie-banner__content {
+  flex: 1;
+}
+
+.cookie-banner__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.cookie-banner__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.cookie-banner__text a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cookie-banner__text a:hover {
+  color: var(--color-primary-dark);
+}
+
+.cookie-banner__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .cookie-banner__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .cookie-banner__actions .btn {
+    width: 100%;
+  }
+}
+
+.cookie-banner__btn--accept {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast);
+}
+
+.cookie-banner__btn--accept:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.cookie-banner__btn--decline {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.cookie-banner__btn--decline:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-gray-100);
+}

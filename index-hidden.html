@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cafe Loma UG - Moderne Premium-Tagesbar in Wesel. Genießen Sie hochwertige Getränke und eine einladende Atmosphäre.">
+  <meta name="theme-color" content="#00502b">
+  
+  <title>Cafe Loma UG | Premium Tagesbar in Wesel</title>
+  
+  <!-- Preconnect für Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  
+  <!-- Fonts: Inter (lokal einbindbar, hier als Fallback System Fonts) -->
+  <style>
+    /* System Font Stack als primäre Schriftart (DSGVO-konform, keine externen Requests) */
+    @font-face {
+      font-family: 'Inter';
+      src: local('Inter'), local('Inter Regular');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: local('Inter Medium');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: local('Inter SemiBold');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: local('Inter Bold');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/cookie-banner.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+</head>
+<body>
+  
+  <!-- ============================================
+       HEADER / NAVIGATION
+       ============================================ -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="Cafe Loma - Zur Startseite">
+          <img src="images/logo.jpeg" alt="Cafe Loma - Die Tagesbar" class="logo__img">
+        </a>
+        
+        <!-- Navigation -->
+        <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+          <ul class="nav__links">
+            <li><a href="#about" class="nav__link">Über uns</a></li>
+            <li><a href="#atmosphare" class="nav__link">Atmosphäre</a></li>
+            <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+          </ul>
+          
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__background">
+        <img src="images/hero.jpg" 
+             alt="Elegante Kaffeetasse auf einem Tisch in stilvoller Umgebung" 
+             loading="eager">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      
+      <div class="hero__content">
+        <span class="hero__label">Premium Tagesbar</span>
+        <h1 id="hero-title" class="hero__title">
+          Cafe Loma
+          <span>Genuss trifft Eleganz</span>
+        </h1>
+        <p class="hero__subtitle">
+          Erleben Sie außergewöhnliche Momente in unserer modernen Oase der Entspannung. 
+          Hochwertige Getränke, stilvolles Ambiente, herzliche Gastfreundschaft.
+        </p>
+        <div class="hero__actions">
+          <a href="#kontakt" class="btn btn--white btn--large">Kontakt aufnehmen</a>
+          <a href="#about" class="btn btn--secondary btn--large" style="color: white; border-color: white;">Mehr erfahren</a>
+        </div>
+      </div>
+      
+      <a href="#about" class="hero__scroll" aria-label="Zum Inhalt scrollen">
+        <span class="hero__scroll-text">Scroll</span>
+        <svg class="hero__scroll-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================ -->
+    <section id="about" class="section section--alt" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about">
+          <div class="about__content">
+            <div class="section-header section-header--left">
+              <span class="section-label">Über uns</span>
+              <h2 id="about-title" class="section-title">Wo jeder Moment zählt</h2>
+              <p class="section-subtitle">
+                Die Cafe Loma UG ist mehr als nur eine Tagesbar – wir sind ein Ort der Begegnung, 
+                ein Rückzugsort vom Alltag und eine Oase für alle, die das Besondere schätzen.
+              </p>
+            </div>
+            
+            <div class="features" style="grid-template-columns: 1fr; margin-top: var(--space-8);">
+              <div class="feature" style="text-align: left; padding: 0; box-shadow: none; background: transparent;">
+                <div class="feature__icon" style="margin: 0 0 var(--space-4) 0;">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 class="feature__title">Täglich geöffnet</h3>
+                <p class="feature__text">Früh bis spät für Sie da – ob zum Morgenkaffee oder zum Feierabenddrink.</p>
+              </div>
+              
+              <div class="feature" style="text-align: left; padding: 0; box-shadow: none; background: transparent;">
+                <div class="feature__icon" style="margin: 0 0 var(--space-4) 0;">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
+                <h3 class="feature__title">Premium Qualität</h3>
+                <p class="feature__text">Sorgfältig ausgewählte Zutaten und Getränke von höchster Qualität.</p>
+              </div>
+              
+              <div class="feature" style="text-align: left; padding: 0; box-shadow: none; background: transparent;">
+                <div class="feature__icon" style="margin: 0 0 var(--space-4) 0;">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 class="feature__title">Herzlicher Service</h3>
+                <p class="feature__text">Unser Team sorgt mit Leidenschaft für Ihr Wohlbefinden.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about__image">
+            <img src="images/about.jpg" 
+                 alt="Innenansicht des Cafe Loma mit stilvoller Einrichtung" 
+                 loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FEATURES SECTION
+         ============================================ -->
+    <section class="section" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Unser Angebot</span>
+          <h2 id="features-title" class="section-title">Was Sie erwartet</h2>
+          <p class="section-subtitle">
+            Von exquisitem Kaffee über erfrischende Drinks bis hin zu köstlichen Snacks – 
+            wir verwöhnen Ihre Sinne.
+          </p>
+        </div>
+        
+        <div class="features grid--3">
+          <article class="feature">
+            <div class="feature__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
+              </svg>
+            </div>
+            <h3 class="feature__title">Spezialitäten-Kaffee</h3>
+            <p class="feature__text">Arabica-Bohnen aus nachhaltigem Anbau, zubereitet von erfahrenen Baristas.</p>
+          </article>
+          
+          <article class="feature">
+            <div class="feature__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <h3 class="feature__title">Kreative Drinks</h3>
+            <p class="feature__text">Hausgemachte Limonaden, Smoothies und saisonale Kreationen.</p>
+          </article>
+          
+          <article class="feature">
+            <div class="feature__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
+              </svg>
+            </div>
+            <h3 class="feature__title">Frische Snacks</h3>
+            <p class="feature__text">Täglich frisch zubereitete Backwaren, Sandwiches und süße Köstlichkeiten.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         GALLERY SECTION
+         ============================================ -->
+    <section id="atmosphare" class="section section--alt" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Atmosphäre</span>
+          <h2 id="gallery-title" class="section-title">Einblicke</h2>
+          <p class="section-subtitle">
+            Lassen Sie sich von unserem einladenden Ambiente inspirieren.
+          </p>
+        </div>
+        
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--large">
+            <img src="images/gallery-1.jpg" 
+                 alt="Gemütlicher Sitzbereich im Cafe Loma" 
+                 loading="lazy">
+            <figcaption class="gallery__overlay">
+              <span class="gallery__caption">Gemütlicher Sitzbereich</span>
+            </figcaption>
+          </figure>
+          
+          <figure class="gallery__item">
+            <img src="images/gallery-2.jpg" 
+                 alt="Latte Art Kaffee" 
+                 loading="lazy">
+            <figcaption class="gallery__overlay">
+              <span class="gallery__caption">Kunstvolle Kaffee-Kreationen</span>
+            </figcaption>
+          </figure>
+          
+          <figure class="gallery__item">
+            <img src="images/gallery-3.jpg" 
+                 alt="Frische Backwaren" 
+                 loading="lazy">
+            <figcaption class="gallery__overlay">
+              <span class="gallery__caption">Hausgemachte Spezialitäten</span>
+            </figcaption>
+          </figure>
+          
+          <figure class="gallery__item">
+            <img src="images/gallery-4.jpg" 
+                 alt="Kaffee Zubereitung" 
+                 loading="lazy">
+            <figcaption class="gallery__overlay">
+              <span class="gallery__caption">Handwerkliche Zubereitung</span>
+            </figcaption>
+          </figure>
+          
+          <figure class="gallery__item">
+            <img src="images/gallery-5.jpg" 
+                 alt="Außenansicht des Cafe" 
+                 loading="lazy">
+            <figcaption class="gallery__overlay">
+              <span class="gallery__caption">Willkommen im Cafe Loma</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section id="kontakt" class="section section--dark" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label" style="background-color: rgba(255,255,255,0.15); color: white;">Kontakt</span>
+          <h2 id="contact-title" class="section-title" style="color: white;">Schreiben Sie uns</h2>
+          <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">
+            Haben Sie Fragen oder möchten Sie einen Tisch reservieren? 
+            Wir freuen uns auf Ihre Nachricht.
+          </p>
+        </div>
+        
+        <div class="contact">
+          <div class="contact__info">
+            <div class="info-card" style="background-color: rgba(255,255,255,0.1);">
+              <div class="info-card__icon" style="background-color: white; color: #00502b;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div class="info-card__content">
+                <h3 class="info-card__title" style="color: white;">Adresse</h3>
+                <p class="info-card__text" style="color: rgba(255,255,255,0.8);">
+                  Cafe Loma UG<br>
+                  Lomberstrasse 2<br>
+                  46483 Wesel
+                </p>
+              </div>
+            </div>
+            
+            <div class="info-card" style="background-color: rgba(255,255,255,0.1);">
+              <div class="info-card__icon" style="background-color: white; color: #00502b;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div class="info-card__content">
+                <h3 class="info-card__title" style="color: white;">Telefon</h3>
+                <p class="info-card__text" style="color: rgba(255,255,255,0.8);">
+                  <a href="tel:+491634258550" style="color: rgba(255,255,255,0.8);">0163 4258550</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="info-card" style="background-color: rgba(255,255,255,0.1);">
+              <div class="info-card__icon" style="background-color: white; color: #00502b;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div class="info-card__content">
+                <h3 class="info-card__title" style="color: white;">E-Mail</h3>
+                <p class="info-card__text" style="color: rgba(255,255,255,0.8);">
+                  <a href="mailto:info@lomatagesbar.de" style="color: rgba(255,255,255,0.8);">info@lomatagesbar.de</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact__form-wrapper">
+            <!-- Alert Messages -->
+            <div id="form-success" class="alert alert--success alert--hidden" role="alert">
+              <strong>Vielen Dank!</strong> Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns bei Ihnen.
+            </div>
+            <div id="form-error" class="alert alert--error alert--hidden" role="alert">
+              <strong>Fehler!</strong> <span>Bitte versuchen Sie es später erneut.</span>
+            </div>
+            
+            <!-- Web3Forms Contact Form -->
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <!-- Web3Forms Access Key - HIER DEINEN KEY EINFÜGEN -->
+              <input type="hidden" name="access_key" value="HIER_DEIN_WEB3FORMS_KEY_EINFÜGEN">
+              
+              <!-- Honeypot Field (Spam Protection) -->
+              <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off">
+              
+              <!-- Redirect after submission (optional) -->
+              <input type="hidden" name="redirect" value="">
+              
+              <div class="form-group">
+                <label for="name" class="form-label">Name *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Ihr vollständiger Name" required>
+                <span class="form-error">Bitte geben Sie Ihren Namen ein.</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">E-Mail *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="ihre@email.de" required>
+                <span class="form-error">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject" class="form-label">Betreff</label>
+                <input type="text" id="subject" name="subject_line" class="form-input" placeholder="Worum geht es?">
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label">Nachricht *</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Ihre Nachricht an uns..." required></textarea>
+                <span class="form-error">Bitte geben Sie eine Nachricht ein.</span>
+              </div>
+              
+              <div class="form-group" style="margin-bottom: 0;">
+                <button type="submit" class="btn btn--primary btn--large" style="width: 100%;">
+                  Nachricht senden
+                </button>
+              </div>
+              
+              <p class="text-muted" style="font-size: var(--font-size-xs); margin-top: var(--space-4); text-align: center;">
+                Mit dem Absenden akzeptieren Sie unsere <a href="datenschutz.html">Datenschutzerklärung</a>.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div class="footer__brand">
+          <img src="images/logo.jpeg" alt="Cafe Loma" class="footer__logo-img">
+          <p class="footer__tagline">
+            Premium Tagesbar in Wesel. Genießen Sie außergewöhnliche Momente in stilvoller Atmosphäre.
+          </p>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="footer__nav">
+          <h3 class="footer__title">Navigation</h3>
+          <ul class="footer__links">
+            <li><a href="#about" class="footer__link">Über uns</a></li>
+            <li><a href="#atmosphare" class="footer__link">Atmosphäre</a></li>
+            <li><a href="#kontakt" class="footer__link">Kontakt</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div class="footer__legal-nav">
+          <h3 class="footer__title">Rechtliches</h3>
+          <ul class="footer__links">
+            <li><a href="impressum.html" class="footer__link">Impressum</a></li>
+            <li><a href="datenschutz.html" class="footer__link">Datenschutz</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div class="footer__contact">
+          <h3 class="footer__title">Kontakt</h3>
+          <div class="footer__contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>Lomberstrasse 2<br>46483 Wesel</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <a href="tel:+491634258550">0163 4258550</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <a href="mailto:info@lomatagesbar.de">info@lomatagesbar.de</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          © 2026 Cafe Loma UG. Alle Rechte vorbehalten.
+        </p>
+        <div class="footer__legal">
+          <a href="impressum.html" class="footer__legal-link">Impressum</a>
+          <a href="datenschutz.html" class="footer__legal-link">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       COOKIE BANNER (DSGVO)
+       ============================================ -->
+  <aside id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie-Einwilligung" aria-live="polite">
+    <div class="container">
+      <div class="cookie-banner__inner">
+        <div class="cookie-banner__content">
+          <h2 class="cookie-banner__title">Datenschutzeinstellungen</h2>
+          <p class="cookie-banner__text">
+            Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. 
+            Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.
+          </p>
+        </div>
+        <div class="cookie-banner__actions">
+          <button id="cookie-decline" class="cookie-banner__btn--decline" type="button">
+            Ablehnen
+          </button>
+          <button id="cookie-accept" class="cookie-banner__btn--accept" type="button">
+            Zustimmen
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="js/cookie-banner.js"></script>
+  <script src="js/form-handler.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Netlify Redirects & Headers Configuration
+# https://docs.netlify.com/routing/redirects/
+
+# Custom 404 page
+/*    /index.html   404
+
+# Redirect HTTP to HTTPS (automatically handled by Netlify, but good to document)
+# This is typically auto-enabled in Netlify domain settings
+
+# Optional: Redirect www to non-www or vice versa
+# https://www.cafeloma.de/*    https://cafeloma.de/:splat    301!
